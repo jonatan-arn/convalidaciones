@@ -1,0 +1,36 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="convalidaciones.listado_convalidaciones_form">
+      <field name="name">Formulario de convalidaciones</field>
+      <field name="model">convalidaciones.convalidaciones_model</field>
+      <field name="arch" type="xml">
+        <form string="Nueva convalidacion">
+          <sheet>
+            <group name="GrupoPadre">
+                <field name="fecha"/>
+                <field name="modulo_id"/>
+                <field name="alumno_id"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="convalidaciones.listado_convalidaciones_tree">
+      <field name="name">Listado de convalidaciones</field>
+      <field name="model">convalidaciones.convalidaciones_model</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="fecha"/>
+          <field name="modulo_id"/>
+          <field name="alumno_id"/>
+        </tree>
+      </field>
+    </record>
+<record model="ir.actions.act_window" id="convalidaciones.action_window_convalidaciones">
+      <field name="name">Convalidaciones</field>
+      <field name="res_model">convalidaciones.convalidaciones_model</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+  </data>
+</odoo>
